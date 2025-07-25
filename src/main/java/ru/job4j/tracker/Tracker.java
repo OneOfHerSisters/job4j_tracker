@@ -66,8 +66,6 @@ public class Tracker {
             System.arraycopy(items, index + 1, items, index, length);
             items[size - 1] = null;
             size--;
-        } else {
-            System.out.println("Item with ID " + id + " was not found.");
         }
     }
 }
