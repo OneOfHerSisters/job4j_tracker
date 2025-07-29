@@ -15,6 +15,25 @@ public class FindEl {
         return result;
     }
 
+    public static boolean sent(String value, String[] abuses) throws ElementAbuseException {
+        for (String abuse : abuses) {
+            if (value.contains(abuse)) {
+                throw new ElementAbuseException("Detected abuse word: " + abuse);
+            }
+        }
+        return true;
+    }
+
+    public static void process(String[] values, String key, String[] abuses) {
+        try {
+            if (indexOf(values, key) != -1) {
+                sent(key, abuses);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         try {
             String[] names = {"Polina", "Sasha", "Olya", "Stas"};
