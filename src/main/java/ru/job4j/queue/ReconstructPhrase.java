@@ -15,13 +15,12 @@ public class ReconstructPhrase {
 
     private String getEvenElements() {
         StringBuilder result = new StringBuilder();
-        boolean take = true;
-        while (!evenElements.isEmpty()) {
-            Character ch = evenElements.pollFirst();
-            if (take) {
+        int size = evenElements.size();
+        for (int i = 0; i < size; i++) {
+            char ch = evenElements.pollFirst();
+            if (i % 2 == 0) {
                 result.append(ch);
             }
-            take = !take;
         }
         return result.toString();
     }
