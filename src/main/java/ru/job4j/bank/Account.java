@@ -1,13 +1,13 @@
+package ru.job4j.bank;
+
+import java.util.Objects;
+
 /**
  * Класс Account представляет банковский счет пользователя с реквизитами и балансом.
  * Используется для хранения информации о счетах в банковском приложении.
  * @author Polina
  * @version 1.0
  */
-package ru.job4j.bank;
-
-import java.util.Objects;
-
 public class Account {
     /**
      * Реквизиты счета (уникальный идентификатор счета).
